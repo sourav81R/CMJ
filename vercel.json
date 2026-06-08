@@ -21,10 +21,6 @@
     {
       "source": "/services/contact",
       "destination": "/services/contact-us.html"
-    },
-    {
-      "source": "/engineering/activities",
-      "destination": "/engineering/activites.html"
     }
   ]
 }
