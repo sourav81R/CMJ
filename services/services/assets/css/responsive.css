@@ -1,0 +1,267 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+  
+    .mainmenu ul li a {
+      padding: 30px 10px;
+    }
+    .subscribe-nesletter button {
+      padding: 0 20px;
+    }
+    .social-icos li {
+        margin-right: 16px;
+    }
+    .single-top-news-item > h4 {
+        font-size: 15px;
+    }
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+     .logo {
+      text-align: center;
+    }
+    .mainmenu ul {
+      text-align: center;
+    }
+    .mainmenu ul li a {
+      padding: 12px 13px;
+    }
+    .mainmenu li:hover ul {
+        top: 53px;
+    }
+    .construction-content-area {
+      padding: 50px 0;
+    }
+    .single-slider-item, single-slider-item .text-center {
+        text-align: center;
+    }
+    .single-slider-item h1 {
+      font-size: 40px;
+    }
+    .project-slides {
+      margin-top: 25px;
+    }
+    .section-title > h2 {
+      margin: 0 0 16px;
+    }
+    .choose-us-item {
+      padding: 20px 0;
+    }
+    .footer-copyright-area, .footer-copyright-area .col-md-6.text-end, .header-top-area .text-end {
+      text-align: center !important;
+    }
+    .text-end {
+      text-align: center!important;
+    }
+    .testimonial-card {
+      margin-bottom: 20px;
+    }
+    .single-top-news-item img {
+      margin-right: 10px;
+    }
+    .single-top-news-item > h4 {
+      margin: 0;
+    }
+    .single-top-news-item {
+      font-size: 18px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+    }
+    .footer-top-area {
+      padding: 40px 0;
+    }
+    .footer-wid {
+      padding: 0 0 10px;
+    }
+    .social-icos {
+      text-align: center;
+    }
+    .our-team-area .single-team {
+      margin-bottom: 20px;
+    }
+    .construction-mini-banner {
+        padding: 30px 0;
+    }
+    .construction-mini-banner h2 {
+      font-size: 26px;
+  }
+  .header-top-area {
+      text-align: center;
+  }
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+     .header-top-area {
+          font-size: 12px;
+          padding: 7px 0;
+          text-align: center;
+        }
+    .seprator {
+      padding: 0 2px;
+    }
+    .social-icon {
+      text-align: center;
+    }
+    .mainmenu, .responsive-menu-wrap a>i.fa, .header-search-bar {
+        display: none
+    }
+    .responsive-menu-wrap {
+        display: block;
+        margin-top: -16px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+    }
+    .mainmenu-area {
+        position: relative;
+        z-index: 9;
+    }
+    .responsive-menu-wrap .slicknav_menu {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        margin: 0;
+        padding: 0;
+    }
+    .slicknav_btn {
+        margin: 0;
+        background-color: #666;
+        border-radius: 0;
+    }
+    .slicknav_nav {
+        background: #333 none repeat scroll 0 0;
+        border-radius: 2px;
+        width: 200px;
+    }
+    .slicknav_nav .slicknav_row:hover, .slicknav_nav a:hover {
+      background: #ffc571 none repeat scroll 0 0;
+      border-radius: 0;
+      color: #fff;
+    }
+    .slicknav_nav .slicknav_row, .slicknav_nav a {
+      margin: 0;
+      padding: 5px 14px;
+        transition: .4s;
+    }
+    .single-slider-item {
+      font-size: 15px;
+      height: 440px;
+    }
+    .single-slider-item h1 {
+      font-size: 30px;
+    }
+    .single-slider-item, single-slider-item .text-center {
+        text-align: center;
+    }
+    .homepage-slides .owl-nav div {
+        color: #333;
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        border: 2px solid #333;
+    }
+    .homepage-slides .owl-nav {
+        margin-top: 5px;
+        text-align: center;
+    }
+    .homepage-slides .owl-nav div.owl-next, .homepage-slides .owl-nav div {
+        left: auto;
+        margin: 10px;
+        right: auto;
+    }
+    .section-title > h2 {
+      padding-bottom: 15px;
+    }
+    .choose-us-item {
+      padding: 20px 0;
+    }
+    .construction-content-area {
+      padding: 30px 0;
+    }
+    .project-slides {
+      margin-top: 25px;
+    }
+    .play-btn {
+      font-size: 40px;
+      height: 70px;
+      line-height: 72px;
+      padding-left: 9px;
+      width: 70px;
+    }
+    .who-we-are {
+      height: 380px;
+      padding: 40px 0;
+    }
+    .section-title > h2 {
+      font-size: 30px;
+    }
+    .subscribe-our-newsletter {
+      height: 440px;
+    }
+    .subscribe-our-newsletter h2 {
+      font-size: 33px;
+    }
+    .newsletter-content > p {
+      font-size: 15px;
+    }
+    .footer-copyright-area{
+      text-align: center;
+    }
+    .footer-copyright-area .col-lg-6.text-end {
+      text-align: center!important;
+    }
+    .text-end {
+      text-align: center!important;
+    }
+    .footer-top-area {
+      padding: 20px 0;
+    }
+    .footer-wid {
+      padding: 0 0 10px;
+    }
+    .social-icos {
+      text-align: center;
+    }
+    .our-team-area .single-team {
+      margin-bottom: 20px;
+    }
+    .construction-mini-banner {
+        padding: 20px 0;
+    }
+    .construction-mini-banner, .construction-breadcumb {
+        text-align: center;
+    }
+    .construction-breadcumb {
+      font-size: 12px;
+    }
+    .comment-metadata h4 {
+      margin: 12px 0 3px;
+    }
+    .subscribe-nesletter button, .subscribe-nesletter input {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .single-blog-inner-content > h3 {
+      font-size: 20px;
+    }
+    .img-circle {
+      border-radius: 0; 
+    }
+    .single-service-inner-content > h3 {
+      font-size: 20px;
+    }
+    .qoute-title-area > h3 {
+      font-size: 18px;
+    }
+    .qoute-title-area {
+      font-size: 12px;
+    }
+    .contact-form-area span {
+      font-size: 13px;
+    }
+    .single-top-news-item > h4 {
+        font-size: 15px;
+    }
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+}

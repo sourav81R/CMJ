@@ -1,0 +1,18 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/services",
+      "destination": "/services/services/index.html"
+    },
+    {
+      "source": "/engineering",
+      "destination": "/engineering/engineering/index.html"
+    },
+    {
+      "source": "/refractories",
+      "destination": "/refractories/refractories/index.html"
+    }
+  ]
+}
