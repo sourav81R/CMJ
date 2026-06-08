@@ -1,86 +1,30 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/services/assets/:path*",
-      "destination": "/services/services/assets/:path*"
-    },
-    {
-      "source": "/engineering/assets/:path*",
-      "destination": "/engineering/engineering/assets/:path*"
-    },
-    {
-      "source": "/services",
-      "destination": "/services/services/index.html"
-    },
-    {
-      "source": "/services/about",
-      "destination": "/services/services/about.html"
-    },
-    {
-      "source": "/services/client",
-      "destination": "/services/services/client.html"
-    },
-    {
-      "source": "/services/manpower-machinery",
-      "destination": "/services/services/services.html"
-    },
+  "redirects": [
     {
       "source": "/services/services",
-      "destination": "/services/services/services.html"
-    },
-    {
-      "source": "/services/health-safety",
-      "destination": "/services/services/health-safety.html"
-    },
-    {
-      "source": "/services/directors-desk",
-      "destination": "/services/services/directors-desk.html"
-    },
-    {
-      "source": "/services/gallery",
-      "destination": "/services/services/gallery.html"
-    },
-    {
-      "source": "/services/contact",
-      "destination": "/services/services/contact-us.html"
-    },
-    {
-      "source": "/engineering",
-      "destination": "/engineering/engineering/index.html"
-    },
-    {
-      "source": "/engineering/about",
-      "destination": "/engineering/engineering/about.html"
-    },
-    {
-      "source": "/engineering/activities",
-      "destination": "/engineering/engineering/activites.html"
+      "destination": "/services/manpower-machinery",
+      "permanent": false
     },
     {
       "source": "/engineering/activites",
-      "destination": "/engineering/engineering/activites.html"
+      "destination": "/engineering/activities",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/services/manpower-machinery",
+      "destination": "/services/services.html"
     },
     {
-      "source": "/engineering/product",
-      "destination": "/engineering/engineering/product.html"
+      "source": "/services/contact",
+      "destination": "/services/contact-us.html"
     },
     {
-      "source": "/engineering/health-safety",
-      "destination": "/engineering/engineering/health-safety.html"
-    },
-    {
-      "source": "/engineering/directors-desk",
-      "destination": "/engineering/engineering/directors-desk.html"
-    },
-    {
-      "source": "/engineering/client",
-      "destination": "/engineering/engineering/client.html"
-    },
-    {
-      "source": "/engineering/contact",
-      "destination": "/engineering/engineering/contact.html"
+      "source": "/engineering/activities",
+      "destination": "/engineering/activites.html"
     }
   ]
 }
