@@ -5,12 +5,17 @@
 #video-background {position: fixed; right: 0;  bottom: 0;min-width: 100%; min-height: 100%; width: 100%; height: auto;z-index: -100;}
 .body_content{display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column; height: 100vh;}
 .top_sec{width: 100%;}
-.logo{width: 100%;}
+.logo{width: 100%; margin-bottom: 16px;}
 .logo img{max-width: 10%;}
 .logo img.group-logo{
-    width: min(280px, 42vw);
-    max-width: 280px;
+    width: min(300px, 60vw);
+    max-width: 300px;
     height: auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    filter: drop-shadow(0 3px 4px rgba(255, 255, 255, 0.65)) drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
 }
 .logo_head h1{font-size: 35px; line-height: 40px; color: #fff; font-weight: bold; text-transform: uppercase; filter: drop-shadow(1px 1px 1px #000);
     letter-spacing: 2px;}

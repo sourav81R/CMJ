@@ -6668,6 +6668,30 @@ li {
 .main-nav__main-navigation .main-nav__navigation-box > li > a{color: #fff;}
 .main-nav__logo span{margin-left: -72px;}
 .stricky-fixed .main-logo{filter: drop-shadow(0px 0px 2px #888885);}
+.contact-nav-logo{
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contact-nav-logo .main-logo,
+.contact-nav-logo .main-logo2{
+  width: 120px;
+  max-width: 120px;
+  height: auto;
+  margin: 0;
+}
+.contact-nav-logo span{
+  display: block;
+  margin: 2px 0 0 !important;
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
 /*--------------------------------------------------------------
 # Google_map
 --------------------------------------------------------------*/
@@ -7356,8 +7380,6 @@ h2.last-head{font-size: 23px;
 .all_contact_info_single h4{text-align: center; font-size: 17px; line-height: 30px; margin: 20px 0; text-decoration: underline;}
 .all_contact_info_single .icon { width: 33px;}
 .first-inner-box iframe{width: 100%; height: 360px; margin-top: 30px;}
-
-
 
 
 
