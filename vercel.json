@@ -1,7 +1,43 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/services/services",
+      "destination": "/services/services/services",
+      "permanent": false
+    },
+    {
+      "source": "/engineering/product",
+      "destination": "/engineering/engineering/product",
+      "permanent": false
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/services/assets/:path*",
+      "destination": "/services/services/assets/:path*"
+    },
+    {
+      "source": "/engineering/assets/:path*",
+      "destination": "/engineering/engineering/assets/:path*"
+    },
+    {
+      "source": "/refractories/img/:path*",
+      "destination": "/refractories/refractories/img/:path*"
+    },
+    {
+      "source": "/refractories/css/:path*",
+      "destination": "/refractories/refractories/css/:path*"
+    },
+    {
+      "source": "/refractories/js/:path*",
+      "destination": "/refractories/refractories/js/:path*"
+    },
+    {
+      "source": "/refractories/fonts/:path*",
+      "destination": "/refractories/refractories/fonts/:path*"
+    },
     {
       "source": "/services",
       "destination": "/services/services/index.html"
