@@ -8,19 +8,15 @@
       "permanent": false
     },
     {
+      "source": "/services/contact-us",
+      "destination": "/services/contact",
+      "permanent": false
+    },
+    {
       "source": "/engineering/activites",
       "destination": "/engineering/activities",
       "permanent": false
     }
   ],
-  "rewrites": [
-    {
-      "source": "/services/manpower-machinery",
-      "destination": "/services/services.html"
-    },
-    {
-      "source": "/services/contact",
-      "destination": "/services/contact-us.html"
-    }
-  ]
+  "rewrites": []
 }
