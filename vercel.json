@@ -23,32 +23,12 @@
       "destination": "/engineering/engineering/assets/:path*"
     },
     {
-      "source": "/refractories/img/:path*",
-      "destination": "/refractories/refractories/img/:path*"
-    },
-    {
-      "source": "/refractories/css/:path*",
-      "destination": "/refractories/refractories/css/:path*"
-    },
-    {
-      "source": "/refractories/js/:path*",
-      "destination": "/refractories/refractories/js/:path*"
-    },
-    {
-      "source": "/refractories/fonts/:path*",
-      "destination": "/refractories/refractories/fonts/:path*"
-    },
-    {
       "source": "/services",
       "destination": "/services/services/index.html"
     },
     {
       "source": "/engineering",
       "destination": "/engineering/engineering/index.html"
-    },
-    {
-      "source": "/refractories",
-      "destination": "/refractories/refractories/index.html"
     }
   ]
 }
