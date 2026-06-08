@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/services",
+      "destination": "/services/services/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/engineering",
+      "destination": "/engineering/engineering/index.html",
+      "permanent": false
+    },
+    {
       "source": "/services/services",
       "destination": "/services/services/services",
       "permanent": false
@@ -21,14 +31,6 @@
     {
       "source": "/engineering/assets/:path*",
       "destination": "/engineering/engineering/assets/:path*"
-    },
-    {
-      "source": "/services",
-      "destination": "/services/services/index.html"
-    },
-    {
-      "source": "/engineering",
-      "destination": "/engineering/engineering/index.html"
     }
   ]
 }
