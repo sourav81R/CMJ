@@ -7258,9 +7258,157 @@ h2.last-head{font-size: 23px;
 .content p{
     text-align:justify;
 }
-.content img{width:100%;}  
+  .content img{width:100%;}  
   .img_pipe{width:100%;}
   .img_pipe img{width:100%;} 
+
+/* Responsive stability patch */
+html,
+body,
+.page-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+iframe,
+video,
+table {
+  max-width: 100%;
+}
+
+.site-footer,
+.site-footer_bottom,
+.mobile-nav__content {
+  overflow-x: hidden;
+}
+
+.footer-widget__about ul li,
+.footer-widget__latest_news li,
+.footer-widget__newsletter_text p,
+.footer-widget_about_text,
+.footer-widget_about_text a,
+.site-footer_bottom_copyright,
+.site-footer_bottom_copyright p,
+.site-footer_bottom_copyright a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.footer_input-box {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.footer_input-box input[type="email"],
+.footer_input-box input[type="Email"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 54px;
+}
+
+.scroll-to-top,
+[class*="whatsapp"],
+[class*="whats"],
+[id*="whatsapp"],
+[id*="whats"] {
+  max-width: calc(100vw - 20px);
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .site-footer {
+    padding: 70px 0 45px;
+  }
+
+  .site-footer .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .site-footer [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-widget__column,
+  .footer-widget__explore,
+  .footer-widget__latest_news,
+  .footer-widget__newsletter {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .footer-widget__about ul li {
+    padding-left: 28px;
+  }
+
+  .footer-widget__about ul li .footer-widget_about_icon {
+    left: 0;
+  }
+
+  .footer-widget__latest_news ul,
+  .footer-widget__about ul,
+  .footer-widget__explore_list {
+    padding-left: 0;
+  }
+
+  li.ft {
+    width: 30%;
+    padding-top: 18px;
+  }
+
+  li.ft img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer_input-box input[type="email"],
+  .footer_input-box input[type="Email"] {
+    height: 54px;
+    padding-right: 50px;
+  }
+
+  .footer_input-box .button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-footer_bottom {
+    padding: 18px 15px;
+  }
+
+  .site-footer_bottom .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .site-footer__social {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .site-footer__social a + a {
+    margin-left: 0;
+  }
+
+  .scroll-to-top {
+    right: 12px;
+    bottom: 12px;
+  }
+}
   
   
   

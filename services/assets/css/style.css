@@ -1537,13 +1537,16 @@ h3.widget-title {
 .subscribe {
     position: relative;
     margin: 20px 0 30px;
+    max-width: 100%;
+    overflow: hidden;
 }
 .subscribe input {
     border: medium none transparent;
     border-radius: 100px;
     height: 45px;
-    padding: 0 14px;
+    padding: 0 112px 0 14px;
     width: 100%;
+    box-sizing: border-box;
 }
 .subscribe button {
     background: #ffc527 none repeat scroll 0 0;
@@ -1610,6 +1613,30 @@ h3.widget-title {
 .mainmenu ul li a {font-size: 13px;padding: 26px 10px;}
 .mainmenu-area{background: linear-gradient(184deg, rgba(113,156,213,1) 0%, rgba(71,112,190,1) 94%, rgba(26,65,165,1) 100%);}
 .mainmenu ul li a{color:#fff}
+html,
+body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img,
+iframe,
+video,
+table{
+  max-width: 100%;
+}
+.site-footer,
+.footer-top-area,
+.footer-copyright-area{
+  overflow-x: hidden;
+}
+.footer-wid,
+.footer-wid a,
+.footer-wid span,
+.footer-wid p,
+.footer-copyright-area,
+.footer-copyright-area a{
+  overflow-wrap: anywhere;
+}
 .footer-logo{max-width:44%}
 .map{width: 100%; }
 .map iframe{width: 100%; min-height: 500px;}

@@ -7381,6 +7381,72 @@ h2.last-head{font-size: 23px;
 .all_contact_info_single .icon { width: 33px;}
 .first-inner-box iframe{width: 100%; height: 360px; margin-top: 30px;}
 
+/* Responsive stability patch */
+html,
+body,
+.page-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+iframe,
+video,
+table {
+  max-width: 100%;
+}
+
+.google_map,
+.site-footer,
+.site-footer_bottom,
+.mobile-nav__content {
+  overflow-x: hidden;
+}
+
+.all_contact_info_single,
+.all_contact_info_single a,
+.all_contact_info_single p,
+.site-footer_bottom_copyright,
+.site-footer_bottom_copyright p,
+.site-footer_bottom_copyright a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .main-nav__header-one .container-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .main-nav__left_one,
+  .main-nav__main-navigation {
+    float: none !important;
+  }
+
+  .contact-nav-logo .main-logo,
+  .contact-nav-logo .main-logo2 {
+    width: 96px;
+    max-width: 96px;
+  }
+
+  .contact-nav-logo span {
+    font-size: 14px;
+    line-height: 18px;
+    white-space: normal;
+  }
+
+  .second-box,
+  .third-box {
+    margin-bottom: 24px;
+  }
+}
 
 
 

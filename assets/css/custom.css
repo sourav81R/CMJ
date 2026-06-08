@@ -1,5 +1,7 @@
 /* Reset */
-*{ margin: 0; padding: 0;}
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+html, body{max-width:100%; overflow-x:hidden;}
+img, video, iframe{max-width:100%;}
 .wrapper{  width: 100%;  height: 100vh; overflow: hidden;  }
 .wrapper .wrapper__video{object-fit: cover; width: 100%; height: 100%;}
 #video-background {position: fixed; right: 0;  bottom: 0;min-width: 100%; min-height: 100%; width: 100%; height: auto;z-index: -100;}
@@ -72,6 +74,13 @@ ul{padding-left: 0 !important;}
     .globe img{max-width:50%;}
      .globe { position: absolute; top: 17%; right: 0%;}
      .slide { right: 21% !important;}
+}
+
+@media only screen and (max-width: 575px){
+    .body_content{padding: 0 14px;}
+    .logo img.group-logo{width: min(260px, 86vw);}
+    .middle_sec{margin-top: 20px;}
+    .globe, .slide{display:none !important;}
 }
 
 
