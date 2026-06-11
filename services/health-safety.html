@@ -50,6 +50,40 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        /* Align HSE heading with the body text below it */
+        .hse-title > h2 { padding-left: 0; }
+        .hse-title > h2::before { left: 0; }
+        /* HSE gallery grid */
+        .hse-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0 40px;
+        }
+        .hse-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+        }
+        @media (max-width: 575px) {
+            .hse-gallery { grid-template-columns: 1fr; }
+        }
+        /* Quality policy image */
+        .hse-quality-policy {
+            margin: 30px 0 40px;
+            text-align: center;
+        }
+        .hse-quality-policy img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+        }
+    </style>
     <!-- jQuery min js -->
     <script src="assets/js/jquery.min.js"></script>
 </head>
@@ -133,12 +167,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title wow fadeInUp">
+                    <div class="section-title wow fadeInUp hse-title">
                         <h2>Health, Safety & Environment (HSE)</h2>
                     </div>
                     <div class="project-info wow fadeInUp">
                         <h3>Building a Safe, Healthy and Sustainable Workplace</h3>
-                        <p>At CMJ Group of Companies, Health, Safety and Environment (HSE) excellence is an integral part of our business operations. We are committed to creating a workplace where every employee, contractor, and stakeholder can work safely while contributing to sustainable growth.</p>
+                        <p>At CMJ SERVICES PVT. LTD., Health, Safety and Environment (HSE) excellence is an integral part of our business operations. We are committed to creating a workplace where every employee, contractor, and stakeholder can work safely while contributing to sustainable growth.</p>
                         <p>Our approach focuses on preventing incidents, minimizing operational risks, protecting the environment, and continuously improving workplace practices. Through structured safety programs, regular training, and strict compliance with statutory requirements, we strive to maintain the highest standards of occupational health, safety, and environmental responsibility. Inspired by industry best practices, our goal is to achieve zero harm and foster a culture where safety remains everyone's responsibility.</p>
 
                         <h3>Our HSE Commitments</h3>
@@ -155,7 +189,7 @@
                         <p>Regular safety training, toolbox talks, and awareness programs help strengthen employee knowledge and encourage proactive participation in maintaining a safe workplace.</p>
 
                         <h4>Environmental Responsibility</h4>
-                        <p>CMJ Group is committed to reducing environmental impact through responsible resource utilization, waste management practices, pollution prevention measures, and sustainable operational planning. We continuously seek opportunities to improve efficiency while protecting natural resources.</p>
+                        <p>CMJ SERVICES PVT. LTD. is committed to reducing environmental impact through responsible resource utilization, waste management practices, pollution prevention measures, and sustainable operational planning. We continuously seek opportunities to improve efficiency while protecting natural resources.</p>
 
                         <h3>Environmental Stewardship</h3>
                         <p>We recognize that long-term business success depends on responsible environmental management. Our commitment includes:</p>
@@ -169,7 +203,20 @@
                         </ul>
 
                         <h3>Our Promise</h3>
-                        <p>At CMJ Group of Companies, we are dedicated to conducting business responsibly by safeguarding people, protecting the environment, and delivering sustainable value to our clients, employees, and communities. Through continuous improvement and strong leadership, we aim to build a safer, healthier, and more sustainable future for all.</p>
+                        <p>At CMJ SERVICES PVT. LTD., we are dedicated to conducting business responsibly by safeguarding people, protecting the environment, and delivering sustainable value to our clients, employees, and communities. Through continuous improvement and strong leadership, we aim to build a safer, healthier, and more sustainable future for all.</p>
+
+                        <h3>HSE in Action</h3>
+                        <div class="hse-gallery">
+                            <img src="assets/image/gallery/cmj1.jpeg" alt="CMJ Services HSE activity 1">
+                            <img src="assets/image/gallery/cmj2.jpeg" alt="CMJ Services HSE activity 2">
+                            <img src="assets/image/gallery/cmj3.jpeg" alt="CMJ Services HSE activity 3">
+                            <img src="assets/image/gallery/cmj4.jpeg" alt="CMJ Services HSE activity 4">
+                        </div>
+
+                        <h3>Quality Policy</h3>
+                        <div class="hse-quality-policy">
+                            <img src="assets/image/gallery/quality-policy.jpeg" alt="CMJ Services Pvt. Ltd. Quality Policy">
+                        </div>
                     </div>
                 </div>
             </div>
