@@ -1607,7 +1607,7 @@ h3.widget-title {
 .header-top-area {font-size:9px;}
 .mainmenu-area .logo{display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:110px; text-align:center;}
 .mainmenu-area .logo a { display:block; margin: 0;}
-.mainmenu-area .logo a img {  background:inherit; max-width: 108px; width: 108px; height: auto; display:block; }
+.mainmenu-area .logo a img {  background:inherit; max-width: 140px; width: 140px; height: auto; display:block; }
 .mainmenu-area .logo span{display:block; color: #fff; font-size: 13px; line-height: 16px; font-weight: 700; margin-top: 10px; position: static; text-transform: uppercase; white-space: nowrap; transition: .3s;-webkit-transition: all 0.3s ease 0s;}
 .mainmenu ul li:hover > a, .mainmenu ul li.active > a {text-shadow: 0 1px 2px #000 !important; background: inherit; text-decoration: none;color: #ffffff;}
 .mainmenu ul li a {font-size: 13px;padding: 26px 10px;}

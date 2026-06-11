@@ -1,0 +1,48 @@
+/* =====================================================================
+   responsive-fix.css  —  Engineering section
+   Loaded LAST. The engineering theme already ships a full off-canvas
+   mobile nav (side-menu__toggler) and extensive media queries, so this
+   file only adds lightweight safety: fluid media, no horizontal scroll,
+   and graceful stacking on small screens. It deliberately does NOT
+   touch the working navigation.
+   ===================================================================== */
+
+/* --- Global guards ---------------------------------------------------- */
+html, body { overflow-x: hidden; max-width: 100%; }
+img { max-width: 100%; height: auto; }
+iframe { max-width: 100%; }
+
+/* Make embedded maps / videos fluid */
+@media only screen and (max-width: 767px) {
+    iframe { width: 100% !important; }
+}
+
+/* --- Section padding eases on small screens --------------------------- */
+@media only screen and (max-width: 767px) {
+    section { padding-left: 0; padding-right: 0; }
+    .page-header h2 { font-size: 28px; }
+}
+@media only screen and (max-width: 480px) {
+    .page-header h2 { font-size: 22px; }
+}
+
+/* --- Headings scale down on phones ------------------------------------ */
+@media only screen and (max-width: 575px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    p  { font-size: 14px; }
+}
+
+/* --- Contact / form fields full width on mobile ----------------------- */
+@media only screen and (max-width: 767px) {
+    input, textarea, select { max-width: 100%; }
+    .second-box, .first-inner-box { margin-bottom: 24px; }
+}
+
+/* --- Footer columns stack cleanly ------------------------------------- */
+@media only screen and (max-width: 767px) {
+    footer .col-lg-3,
+    footer .col-md-6,
+    footer [class*="col-"] { margin-bottom: 24px; }
+}

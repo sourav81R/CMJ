@@ -1,0 +1,130 @@
+/* =====================================================================
+   responsive-fix.css  —  Services section
+   Loaded LAST so it overrides style.css and responsive.css.
+   Goal: make every services page work cleanly on desktop, laptop,
+   iPad (portrait + landscape) and mobile (small + large), and fix the
+   nav "Contact wraps to a second line" issue on mid-size desktops.
+   ===================================================================== */
+
+/* --- Global guards ---------------------------------------------------- */
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; max-width: 100%; }
+img { max-width: 100%; height: auto; }
+
+/* ---------------------------------------------------------------------
+   NAV FIX (the reported bug)
+   8 menu items did not fit on one line between ~992px and ~1200px because
+   link padding stayed large and the mobile menu only kicked in below
+   767px. Tighten link padding progressively so all items stay on ONE
+   line down to 992px, then hand off to the hamburger below that.
+   --------------------------------------------------------------------- */
+
+/* Keep the whole nav on a single line; never let it wrap. */
+.mainmenu ul { white-space: nowrap; }
+.mainmenu ul li { float: none; }
+
+/* Large desktops: comfortable spacing. */
+@media only screen and (min-width: 1201px) {
+    .mainmenu ul li a { padding: 26px 14px; font-size: 14px; }
+}
+
+/* Laptops / smaller desktops (992–1200): tighten so 8 items fit one line.
+   This overrides the old rule that *increased* padding to 30px 10px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .mainmenu { padding-right: 0; }
+    .mainmenu ul li a { padding: 26px 8px !important; font-size: 12.5px; letter-spacing: 0; }
+    .mainmenu-area .logo a img { max-width: 120px; width: 120px; }
+}
+
+/* ---------------------------------------------------------------------
+   TABLET & MOBILE: show the slicknav hamburger, hide the inline menu.
+   slicknav is initialised in active.js and prepended to
+   .responsive-menu-wrap. Below 992px we switch to it (was only <768px).
+   --------------------------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+    .mainmenu { display: none; }
+    .responsive-menu-wrap { display: block; }
+    .responsive-menu-wrap .slicknav_menu { display: block; }
+    .mainmenu-area { padding: 10px 0; }
+    .mainmenu-area .logo { text-align: left; }
+    .mainmenu-area .logo a img { max-width: 130px; width: 130px; }
+    .header-top-area .col-lg-9,
+    .header-top-area .col-lg-3 { width: 100%; text-align: center; }
+}
+
+/* slicknav default styling tweak spots */
+@media only screen and (max-width: 991px) {
+    .slicknav_menu { background: transparent; padding: 0; }
+    .slicknav_btn { background: #0c3d79; margin: 8px 0; }
+    .slicknav_nav { background: #0c3d79; }
+    .slicknav_nav a { color: #fff; font-size: 14px; }
+    .slicknav_nav a:hover { background: #ffc527; color: #222; border-radius: 0; }
+}
+
+/* ---------------------------------------------------------------------
+   BANNERS — scale the mini banner on smaller screens.
+   --------------------------------------------------------------------- */
+.construction-mini-banner { background-size: cover; background-position: center; }
+@media only screen and (max-width: 991px) {
+    .construction-mini-banner { padding: 40px 0; text-align: center; }
+    .construction-mini-banner h2 { font-size: 28px; }
+    .construction-mini-banner .col-md-4,
+    .construction-mini-banner .col-md-8 { width: 100%; }
+    .construction-breadcumb { justify-content: center; }
+}
+@media only screen and (max-width: 575px) {
+    .construction-mini-banner h2 { font-size: 22px; }
+}
+
+/* ---------------------------------------------------------------------
+   CONTENT / SECTION TITLES / TEXT
+   --------------------------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+    .construction-content-area { padding: 40px 0; }
+    .section-title > h2 { font-size: 22px; }
+    .construction-content-area .col-sm-6 { margin-bottom: 20px; }
+}
+@media only screen and (max-width: 575px) {
+    .section-title > h2 { font-size: 20px; }
+    .project-info h3 { font-size: 18px; }
+    .project-info h4 { font-size: 16px; }
+    p { font-size: 14px; }
+}
+
+/* ---------------------------------------------------------------------
+   GALLERY (gallery.html) — keep uniform sizing fluid across breakpoints.
+   --------------------------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+    .single-portfolio-item img { height: 220px; }
+}
+@media only screen and (max-width: 575px) {
+    .single-portfolio-item img { height: 200px; }
+}
+
+/* HSE gallery (health-safety.html) becomes single column on phones —
+   already handled inline; reinforce here for safety. */
+@media only screen and (max-width: 575px) {
+    .hse-gallery { grid-template-columns: 1fr !important; }
+}
+
+/* ---------------------------------------------------------------------
+   FOOTER — stack columns cleanly on tablet/mobile.
+   --------------------------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+    .footer-top-area .col-lg-3 { width: 50%; margin-bottom: 30px; }
+}
+@media only screen and (max-width: 575px) {
+    .footer-top-area .col-lg-3 { width: 100%; }
+    .footer-copyright-area .col-lg-6 { width: 100%; text-align: center !important; }
+    .footer-copyright-area .text-end { text-align: center !important; }
+    .subscribe input { width: 100%; }
+}
+
+/* ---------------------------------------------------------------------
+   CONTACT PAGE form / map fluid (services/contact.html)
+   --------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+    .contact-form input,
+    .contact-form textarea { width: 100%; }
+    iframe, .map iframe { width: 100% !important; }
+}

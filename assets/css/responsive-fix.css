@@ -1,0 +1,46 @@
+/* =====================================================================
+   responsive-fix.css  —  Root section (index.html, contact.html)
+   Loaded LAST. The root pages use the same template as engineering with
+   a working off-canvas nav and built-in media queries, so this file only
+   adds lightweight safety: fluid media, no horizontal scroll, graceful
+   stacking. It does NOT modify the navigation.
+   ===================================================================== */
+
+/* --- Global guards ---------------------------------------------------- */
+html, body { overflow-x: hidden; max-width: 100%; }
+img { max-width: 100%; height: auto; }
+iframe { max-width: 100%; }
+
+@media only screen and (max-width: 767px) {
+    iframe { width: 100% !important; }
+}
+
+/* --- Page header / banners ------------------------------------------- */
+.page-header { background-size: cover; background-position: center; }
+@media only screen and (max-width: 767px) {
+    .page-header h2 { font-size: 28px; }
+    section { padding-left: 0; padding-right: 0; }
+}
+@media only screen and (max-width: 480px) {
+    .page-header h2 { font-size: 22px; }
+}
+
+/* --- Headings / text scale on phones ---------------------------------- */
+@media only screen and (max-width: 575px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    p  { font-size: 14px; }
+}
+
+/* --- Contact info / form blocks stack on mobile ----------------------- */
+@media only screen and (max-width: 767px) {
+    .second-box, .first-inner-box,
+    .all_contact_info_single { margin-bottom: 24px; }
+    input, textarea, select { max-width: 100%; }
+}
+
+/* --- Footer columns stack cleanly ------------------------------------- */
+@media only screen and (max-width: 767px) {
+    footer [class*="col-"] { margin-bottom: 24px; }
+}
