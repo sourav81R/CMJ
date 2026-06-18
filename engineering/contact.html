@@ -228,7 +228,10 @@
                     </div>
                     <div class="col-xl-7">
                         <div class="contact-one__form__wrap">
-                            <form action="inc/sendemail.php" class="contact-one__form contact-form-validated">
+                            <form action="../inc/sendemail.php" method="POST" class="contact-one__form contact-form-validated">
+                                <!-- Honeypot: hidden from humans, bots fill it -->
+                                <input type="text" name="website" tabindex="-1" autocomplete="off"
+                                    style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-group">
@@ -263,6 +266,7 @@
                                     </div>
                                 </div>
                             </form>
+                            <div class="contact-form-result" style="margin-top:15px;"></div>
                         </div>
                     </div>
                 </div>
@@ -480,6 +484,40 @@ s0.parentNode.insertBefore(s1,s0);
 
     <!-- template scripts -->
     <script src="assets/js/theme.js"></script>
+    <!-- Contact form handler: posts to ../inc/sendemail.php, reads JSON result -->
+    <script>
+    (function ($) {
+        var $form = $(".contact-one__form");
+        if (!$form.length) return;
+        // Take over submission from the theme's default handler.
+        $form.off("submit").on("submit", function (e) {
+            e.preventDefault();
+            var $result = $(".contact-form-result");
+            var name = $form.find('[name="name"]').val().trim();
+            var email = $form.find('[name="email"]').val().trim();
+            var message = $form.find('[name="message"]').val().trim();
+            var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            if (!name || !emailOk || !message) {
+                $result.html("<div class='alert alert-danger'>Please fill all fields with a valid email.</div>");
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: $form.attr("action"),
+                data: $form.serialize(),
+                dataType: "json"
+            }).done(function (res) {
+                var msg = (res && res.msg) ? res.msg : "Your message was sent. Thank you!";
+                $result.html("<div class='alert alert-success'>" + msg + "</div>");
+                $form[0].reset();
+            }).fail(function (xhr) {
+                var msg = "Something went wrong. Please email us at cmjeng@cmjgroupofcompanies.com";
+                if (xhr && xhr.responseJSON && xhr.responseJSON.msg) { msg = xhr.responseJSON.msg; }
+                $result.html("<div class='alert alert-danger'>" + msg + "</div>");
+            });
+        });
+    })(jQuery);
+    </script>
 
 
 </body>

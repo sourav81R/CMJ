@@ -1,6 +1,90 @@
+# =====================================================================
+#  CMJ Group of Companies — Apache / cPanel configuration
+# =====================================================================
+
 RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.cmjgroupofcompanies.com/$1 [R,L]
+
+# ---------------------------------------------------------------------
+# Force HTTPS (domain-agnostic — works on any domain, incl. temp URLs)
+# Redirects http:// -> https:// using whatever host the request came in on.
+# ---------------------------------------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ---------------------------------------------------------------------
+# Force www  (comment out this block if you prefer the non-www version)
+# ---------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} !^(localhost|127\.) [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# ---------------------------------------------------------------------
+# Security headers
+# ---------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Stop the site being framed by other sites (clickjacking).
+    Header always set X-Frame-Options "SAMEORIGIN"
+    # Stop browsers MIME-sniffing responses away from declared content-type.
+    Header always set X-Content-Type-Options "nosniff"
+    # Basic XSS protection for older browsers.
+    Header always set X-XSS-Protection "1; mode=block"
+    # Don't leak full URLs to third-party sites.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Lock down powerful browser features we don't use.
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    # Tell browsers to prefer HTTPS for 6 months (only sent over HTTPS).
+    Header always set Strict-Transport-Security "max-age=15768000" "expr=%{HTTPS} == 'on'"
+    # Don't advertise PHP version.
+    Header unset X-Powered-By
+    Header always unset X-Powered-By
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Disable directory browsing (don't list files if no index page).
+# ---------------------------------------------------------------------
+Options -Indexes
+
+# ---------------------------------------------------------------------
+# Block access to sensitive / dot files.
+# ---------------------------------------------------------------------
+<FilesMatch "(^\.|\.(htaccess|htpasswd|ini|log|sh|bak|sql|git)|~)$">
+    Require all denied
+</FilesMatch>
+
+# Protect the .htaccess itself explicitly.
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# ---------------------------------------------------------------------
+# Browser caching for static assets (faster repeat visits).
+# ---------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg          "access plus 1 month"
+    ExpiresByType image/png           "access plus 1 month"
+    ExpiresByType image/gif           "access plus 1 month"
+    ExpiresByType image/webp          "access plus 1 month"
+    ExpiresByType image/svg+xml       "access plus 1 month"
+    ExpiresByType text/css            "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType font/woff2          "access plus 1 month"
+    ExpiresByType image/x-icon        "access plus 1 year"
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Gzip compression (smaller transfers).
+# ---------------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml font/woff2
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Custom error page (optional — falls back to default if missing).
+# ---------------------------------------------------------------------
+# ErrorDocument 404 /404.html
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php82” package as the default “PHP” programming language.

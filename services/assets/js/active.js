@@ -142,9 +142,8 @@
 	    var sub = $('#contact_subject').val();
 	    var phone = $('#contact_phone').val();
 	    var message = $('#contact_message').val();
-		var recaptcha = $("#g-recaptcha-response").val();
-		
-	    if(name == "" || email == "" || message == "" || name == " " || message == " " || recaptcha == " " || sub == " " || phone ==" "){
+
+	    if(name == "" || email == "" || message == "" || name == " " || message == " " || sub == " " || phone ==" "){
 	    	jQuery('#contact_send_status').removeClass('message_send');
 		   	jQuery('#contact_send_status').addClass('message_notsend');
 			jQuery('#contact_send_status').text('Please fill all fields with correct data.');
@@ -159,15 +158,18 @@
 				},
 			})
 			.done(function(response) {
-				$('#contact_send_status').removeClass('message_notsend');
+				var msg = (response && response.msg) ? response.msg : "Your message was sent successfully. Thank you!";
+				$('#contact_send_status').show().removeClass('message_notsend');
 			   	$('#contact_send_status').addClass('message_send');
-			   	$('#contact_send_status').html("<div class='alert alert-success' role='alert'>Your email successfully Sent ! Thank you.</div>");
-				$("#contact_send_status").fadeOut(3000);				
+			   	$('#contact_send_status').html("<div class='alert alert-success' role='alert'>" + msg + "</div>");
+				$("#contact_send_status").fadeOut(5000);
 			})
-			.fail(function(data) {
-				jQuery('#contact_send_status').removeClass('message_send');
+			.fail(function(xhr) {
+				var msg = "Something went wrong. Please email us directly at cmjser@cmjgroupofcompanies.com";
+				if (xhr && xhr.responseJSON && xhr.responseJSON.msg) { msg = xhr.responseJSON.msg; }
+				jQuery('#contact_send_status').show().removeClass('message_send');
 			   	jQuery('#contact_send_status').addClass('message_notsend');
-				jQuery('#contact_send_status').html("<div class='alert alert-danger' role='alert'>Something wrong please try again!</div>");
+				jQuery('#contact_send_status').html("<div class='alert alert-danger' role='alert'>" + msg + "</div>");
 			});
 		}
 	});

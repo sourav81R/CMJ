@@ -166,8 +166,11 @@
                     <div class="contact-form-area">
                         <h3>Fill in the form below and we’ll get back in touch:</h3>
                         <form id="contatc_form" method="POST"
-                            action="https://templates.envytheme.com/demo/runhill/assets/include/sendmail.php"
+                            action="../inc/sendemail.php"
                             name="myform">
+                            <!-- Honeypot: hidden from humans, bots fill it -->
+                            <input type="text" name="website" tabindex="-1" autocomplete="off"
+                                style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <input type="text" id="contact_name" name="name" placeholder="Name:" required>
