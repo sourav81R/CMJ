@@ -56,22 +56,30 @@
         /* Align HSE heading with the body text below it */
         .hse-title > h2 { padding-left: 0; }
         .hse-title > h2::before { left: 0; }
-        /* HSE gallery grid */
+        /* HSE gallery grid — uniform sizing so all photos align */
         .hse-gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin: 30px 0 40px;
         }
         .hse-gallery img {
             width: 100%;
-            height: auto;
+            height: 240px;
+            object-fit: cover;
             display: block;
             border: 1px solid #e5e5e5;
             border-radius: 4px;
+            transition: transform .3s ease;
+        }
+        .hse-gallery img:hover { transform: scale(1.03); }
+        @media (max-width: 991px) {
+            .hse-gallery { grid-template-columns: repeat(2, 1fr); }
+            .hse-gallery img { height: 220px; }
         }
         @media (max-width: 575px) {
             .hse-gallery { grid-template-columns: 1fr; }
+            .hse-gallery img { height: 200px; }
         }
         /* Quality policy image */
         .hse-quality-policy {
@@ -213,6 +221,17 @@
                             <img src="assets/image/gallery/cmj2.jpeg" alt="CMJ Services HSE activity 2">
                             <img src="assets/image/gallery/cmj3.jpeg" alt="CMJ Services HSE activity 3">
                             <img src="assets/image/gallery/cmj4.jpeg" alt="CMJ Services HSE activity 4">
+                            <img src="assets/image/gallery/cmj10.jpeg" alt="CMJ Services HSE activity 10">
+                            <img src="assets/image/gallery/cmj11.jpeg" alt="CMJ Services HSE activity 11">
+                            <img src="assets/image/gallery/cmj12.jpeg" alt="CMJ Services HSE activity 12">
+                            <img src="assets/image/gallery/cmj13.jpeg" alt="CMJ Services HSE activity 13">
+                            <img src="assets/image/gallery/cmj14.jpeg" alt="CMJ Services HSE activity 14">
+                            <img src="assets/image/gallery/cmj15.jpeg" alt="CMJ Services HSE activity 15">
+                            <img src="assets/image/gallery/cmj16.jpeg" alt="CMJ Services HSE activity 16">
+                            <img src="assets/image/gallery/cmj17.jpeg" alt="CMJ Services HSE activity 17">
+                            <img src="assets/image/gallery/cmj18.jpeg" alt="CMJ Services HSE activity 18">
+                            <img src="assets/image/gallery/cmj19.jpeg" alt="CMJ Services HSE activity 19">
+                            <img src="assets/image/gallery/cmj20.jpeg" alt="CMJ Services HSE activity 20">
                         </div>
 
                         <h3>Quality Policy</h3>
