@@ -1651,7 +1651,7 @@ li {
 
 .mobile-nav__content {
   width: 300px;
-  background-color: var(--thm-black);
+  background-color: #3b78c4;
   z-index: 10;
   position: relative;
   height: 100%;
@@ -3210,8 +3210,8 @@ li {
 .footer-widget__about_logo a img {
 }
 .foot_lo {
-  max-width: 300px;
-  width: 300px;
+  max-width: 220px;
+  width: 220px;
   height: auto;
 }
 .footer-widget_about_text__box {
@@ -3219,7 +3219,7 @@ li {
   padding-bottom: 18px;
 }
 .footer-widget_about_text__box p {
-  color: #9b9b9b;
+  color: #e8eef7;
   font-size: 15px;
   margin: 0;
   line-height: 30px;
@@ -3288,7 +3288,7 @@ li {
 .footer-widget__explore_list li a {
   position: relative;
   font-size: 15px;
-  color: #9b9b9b;
+  color: #e8eef7;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -3348,6 +3348,13 @@ li {
 .footer-widget__latest_news {
   margin-left: 7px;
 }
+.footer-widget__latest_news ul li,
+.footer-widget__latest_news ul li a,
+.footer-widget__latest_news ul li b {
+  color: #e8eef7;
+  font-size: 15px;
+  line-height: 30px;
+}
 .footer-widget__latest_news_list {
 }
 .footer-widget__latest_news_list li {
@@ -3398,7 +3405,7 @@ li {
 }
 .footer-widget__newsletter_text p {
   font-size: 15px;
-  color: #9b9b9b;
+  color: #e8eef7;
   margin: 0;
   line-height: 30px;
 }
@@ -3414,7 +3421,7 @@ li {
 
 .footer_input-box input[type="Email"] {
   font-size: 15px;
-  color: #9b9b9b;
+  color: #e8eef7;
   height: 70px;
   width: 100%;
   background: transparent;
@@ -3453,16 +3460,16 @@ li {
   outline: none;
 }
 .footer_input-box input[type="email"]::-webkit-input-placeholder {
-  color: #b4b8c3;
+  color: #d6deeb;
 }
 .footer_input-box input[type="email"]:-moz-placeholder {
-  color: #b4b8c3;
+  color: #d6deeb;
 }
 .footer_input-box input[type="email"]::-moz-placeholder {
-  color: #b4b8c3;
+  color: #d6deeb;
 }
 .footer_input-box input[type="email"]:-ms-input-placeholder {
-  color: #b4b8c3;
+  color: #d6deeb;
 }
 
 .mc-form__response {
@@ -6799,7 +6806,7 @@ font-size: 18px; line-height: 27px;
  .main-logo2{display:none;}
  .stricky-fixed .main-logo{display:none;}
  .stricky-fixed .main-logo2{display:block; max-width:110px; width:110px; height:auto;}
- .foot_lo{display:inline-block; max-width:98px;}
+ .foot_lo{display:inline-block; max-width:200px; width:200px; height:auto;}
  .main-slider p, .main-slider h2{color:#000;}
  .banner-slider-button-prev, .banner-slider-button-next{color:#000; border:2px solid #000;}
  .main-slider p::before{background:#a50a2e;}
