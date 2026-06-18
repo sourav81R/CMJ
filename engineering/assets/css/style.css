@@ -3186,7 +3186,7 @@ li {
 .site-footer {
   position: relative;
   display: block;
-  background: #151515;
+  background: #2666b5;
   padding: 127px 0 102px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3199,7 +3199,7 @@ li {
   height: 100%;
   width: 100%;
   content: "";
-  background: rgba(21, 21, 21, 0.96);
+  background: rgba(38, 102, 181, 0.94);
 }
 .footer-widget__about {
 }
@@ -3208,6 +3208,11 @@ li {
 .footer-widget__about_logo a {
 }
 .footer-widget__about_logo a img {
+}
+.foot_lo {
+  max-width: 300px;
+  width: 300px;
+  height: auto;
 }
 .footer-widget_about_text__box {
   padding-top: 36px;
