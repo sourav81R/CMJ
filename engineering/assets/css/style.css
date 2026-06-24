@@ -3229,10 +3229,11 @@ li {
 .footer-widget__about ul li {
   position: relative;
   display: block;
-  padding-left: 40px;
+  padding-left: 28px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 6px;
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 .footer-widget__about ul li:last-child {
   border-bottom: none;
@@ -3252,7 +3253,8 @@ li {
 .footer-widget__about ul li .footer-widget_about_text {
 }
 .footer-widget__about ul li .footer-widget_about_text a {
-  font-size: 14px;
+  font-size: 11px;
+  white-space: nowrap;
   color: var(--thm-base);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
