@@ -3357,6 +3357,14 @@ li {
   font-size: 15px;
   line-height: 30px;
 }
+/* Space between the main address and the Factory Address line */
+.footer-widget__latest_news ul li {
+  display: block !important;
+  margin-bottom: 35px !important;
+}
+.footer-widget__latest_news ul li:last-child {
+  margin-bottom: 0 !important;
+}
 .footer-widget__latest_news_list {
 }
 .footer-widget__latest_news_list li {
