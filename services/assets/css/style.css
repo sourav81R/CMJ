@@ -1449,7 +1449,7 @@ h3.widget-title {
 
 /* Footer area CSS */
 .footer-top-area {
-    background: #071c33 none repeat scroll 0 0;
+    background: linear-gradient(184deg, rgba(113,156,213,1) 0%, rgba(71,112,190,1) 94%, rgba(26,65,165,1) 100%);
 }
 .footer-top-area,
 .footer-top-area a {
@@ -1459,12 +1459,12 @@ h3.widget-title {
     padding: 80px 0;
 }
 .footer-logo {
-    background: #fff none repeat scroll 0 0;
-    color: #222;
+    background: transparent none repeat scroll 0 0;
+    color: #fff;
     display: inline-block;
     font-size: 16px;
     margin: 0 0 10px;
-    padding: 10px 20px;
+    padding: 0;
     text-transform: uppercase;
 }
 .footer-wid-title {
@@ -1488,15 +1488,15 @@ h3.widget-title {
   margin-bottom: 5px;
 }
 .footer-wid > span {
-    color: #5d6d7e;
+    color: #e8eef7;
     display: block;
     font-size: 13px;
     font-weight: 300;
     line-height: 23px;
 }
 .footer-copyright-area {
-  background: #04101e none repeat scroll 0 0;
-  color: #838d99;
+  background: #1a41a5 none repeat scroll 0 0;
+  color: #d6deeb;
   padding: 15px 0;
 }
 .social-icos li {
@@ -1507,12 +1507,12 @@ h3.widget-title {
     margin: 0;
 }
 .address-info > span {
-    color: #5d6d7e;
+    color: #e8eef7;
     display: block;
     font-size: 14px;
 }
 .footer-copyright-area a {
-  color: #838d99;
+  color: #d6deeb;
 }
 .single-footer-iem {
     border-bottom: 1px solid #2e4155;
